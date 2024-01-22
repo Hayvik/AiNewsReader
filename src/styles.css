@@ -1,0 +1,87 @@
+.spinner {
+    width: 5em;
+    height: 5em;
+    cursor: not-allowed;
+    border-radius: 50%;
+    border: 2px solid #444;
+    box-shadow: -10px -10px 10px #6359f8, 0px -10px 10px 0px #9c32e2, 10px -10px 10px #f36896, 10px 0 10px #ff0b0b, 10px 10px 10px 0px#ff5500, 0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700;
+    box-shadow: -10px -10px 10px #6359f8, 0px -10px 10px 0px #9c32e2, 10px -10px 10px #f36896, 10px 0 10px #ff0b0b, 10px 10px 10px 0px#ff5500, 0 10px 10px 0px #ff9500, -10px 10px 10px 0px #ffb700 inset;
+
+    
+    animation: rot55 0.7s linear infinite;
+    margin: 5% 0 2% 48%;
+  }
+  
+  .spinnerin {
+    border: 2px solid #444;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes rot55 {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .btn {
+    font-family:'Bruno Ace SC', cursive;
+    font-weight: 700;
+    margin-left: 42%;
+    font-size: 30px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #080202;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+    cursor: pointer;
+    
+   
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #22A699;
+    transition: .5s ease;
+  }
+  
+  .btn:hover {
+    color: #1e1e2b;
+    transition-delay: .5s;
+  }
+  
+  .btn:hover::before {
+    width: 100%;
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #FFAAC9;
+    transition: .4s ease;
+    z-index: -1;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: #080202;
+  }
